@@ -1,0 +1,12 @@
+{
+  "id": "mousetweaks",
+  "name": "Mouse Tweaks",
+  "authors": [
+    "YaLTeR",
+    "gbui"
+  ],
+  "listeners": [
+    "yalter.mousetweaks.rift.MouseTweaksRiftCore",
+    "yalter.mousetweaks.rift.MouseTweaksRift"
+  ]
+}
