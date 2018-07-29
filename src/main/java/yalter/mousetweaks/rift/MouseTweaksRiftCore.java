@@ -6,6 +6,6 @@ import org.spongepowered.asm.mixin.Mixins;
 public class MouseTweaksRiftCore implements InitializationListener {
     @Override
     public void onInitialization() {
-        Mixins.addConfiguration("mixins.mousetweaks.core.json");
+        Mixins.addConfiguration("mixins.mousetweaks.json");
     }
 }
