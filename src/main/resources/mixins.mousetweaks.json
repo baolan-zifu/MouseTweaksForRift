@@ -6,6 +6,7 @@
   "package": "yalter.mousetweaks.rift.mixin",
   "refmap": "mixins.mousetweaks.refmap.json",
   "mixins": [
+    "MixinMouseHelper",
     "MixinGuiContainer"
   ],
   "client": []

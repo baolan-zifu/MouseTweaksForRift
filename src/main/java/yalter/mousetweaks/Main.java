@@ -11,6 +11,7 @@ import org.lwjgl.glfw.GLFW;
 import yalter.mousetweaks.api.IMTModGuiContainer2;
 import yalter.mousetweaks.api.IMTModGuiContainer2Ex;
 import yalter.mousetweaks.handlers.*;
+import yalter.mousetweaks.rift.IMixinMouseHelper;
 
 import java.io.File;
 import java.util.List;
@@ -278,8 +279,8 @@ public class Main
 	}
 
 	private static void handleWheel(Slot selectedSlot) {
-		//TODO GLFW.glfwSetScrollCallback(mc.mainWindow.getWindowPointer(), (win, dx, dy) -> {});
-		int wheel = 0;//(config.wheelTweak && !disableWheelForThisContainer) ? Mouse.getDWheel() / 120 : 0;
+		IMixinMouseHelper mixinMouseHelper = (IMixinMouseHelper) mc.mouseHelper;
+		int wheel = (config.wheelTweak && !disableWheelForThisContainer) ? mixinMouseHelper.getAndResetDWheel() / 120 : 0;
 		if (config.wheelScrollDirection == WheelScrollDirection.INVERTED)
 			wheel = -wheel;
 
