@@ -38,11 +38,11 @@ public class GuiContainerHandler implements IGuiScreenHandler {
 	}
 
 	private double getRequiredMouseX() {
-		return (mc.mouseHelper.func_198024_e() * mc.mainWindow.func_198107_o()) / mc.mainWindow.func_198105_m();
+		return (mc.mouseHelper.func_198024_e() * mc.mainWindow.getScaledWidth()) / mc.mainWindow.getWindowWidth();
 	}
 
 	private double getRequiredMouseY() {
-		return (mc.mouseHelper.func_198026_f() * mc.mainWindow.func_198087_p()) / mc.mainWindow.func_198083_n();
+		return (mc.mouseHelper.func_198026_f() * mc.mainWindow.getScaledWidth()) / mc.mainWindow.getWindowWidth();
 	}
 
 	@Override

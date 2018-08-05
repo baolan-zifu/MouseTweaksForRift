@@ -1,6 +1,6 @@
 package yalter.mousetweaks.rift;
 
-import org.dimdev.rift.listener.ClientTickable;
+import org.dimdev.rift.listener.client.ClientTickable;
 import yalter.mousetweaks.Constants;
 import yalter.mousetweaks.Main;
 import yalter.mousetweaks.OnTickMethod;
