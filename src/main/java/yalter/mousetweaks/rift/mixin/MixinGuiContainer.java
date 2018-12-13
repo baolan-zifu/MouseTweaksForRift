@@ -35,7 +35,7 @@ public abstract class MixinGuiContainer implements IMixinGuiContainer {
 
     @Override
     public Slot getSlotAt(double x, double y) {
-        return shadow$func_195360_a(x, y);
+        return shadow$getSelectedSlot(x, y);
     }
 
     @Override
@@ -44,7 +44,7 @@ public abstract class MixinGuiContainer implements IMixinGuiContainer {
     }
 
     @Shadow
-    private Slot shadow$func_195360_a(double x, double y) { return null; }
+    private Slot shadow$getSelectedSlot(double x, double y) { return null; }
 
     @Shadow
     protected abstract void shadow$handleMouseClick(Slot slot, int slotId, int mouseButton, ClickType type);

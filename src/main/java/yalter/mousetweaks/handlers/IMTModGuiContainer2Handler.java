@@ -18,7 +18,7 @@ public class IMTModGuiContainer2Handler implements IGuiScreenHandler {
 	protected IMixinGuiContainer mixinGuiContainer;
 
 	public IMTModGuiContainer2Handler(IMTModGuiContainer2 modGuiContainer) {
-		this.mc = Minecraft.getMinecraft();
+		this.mc = Minecraft.getInstance();
 		this.modGuiContainer = modGuiContainer;
 		try {
 			this.mixinGuiContainer = (IMixinGuiContainer) modGuiContainer;

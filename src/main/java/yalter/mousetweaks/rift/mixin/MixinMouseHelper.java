@@ -19,9 +19,9 @@ public class MixinMouseHelper implements IMixinMouseHelper {
         return ret;
     }
 
-    @Inject(method = "onScroll", at = @At("RETURN"))
+    @Inject(method = "scrollCallback", at = @At("RETURN"))
     private void onSetScrollCallback(long window, double xoffset, double yoffset, CallbackInfo ci) {
-        if (window == Minecraft.getMinecraft().mainWindow.getWindowPointer()) {
+        if (window == Minecraft.getInstance().mainWindow.getHandle()) {
             dwheel = (int) (yoffset * 120.0);
         }
     }

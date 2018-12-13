@@ -1,5 +1,6 @@
 package yalter.mousetweaks.rift;
 
+import net.minecraft.client.Minecraft;
 import org.dimdev.rift.listener.client.ClientTickable;
 import yalter.mousetweaks.Constants;
 import yalter.mousetweaks.Main;
@@ -16,7 +17,7 @@ public class MouseTweaksRift implements ClientTickable {
     }
 
     @Override
-    public void clientTick() {
+    public void clientTick(Minecraft client) {
         init();
         if (Main.onTickMethod == OnTickMethod.RIFT)
             Main.onUpdateInGame();

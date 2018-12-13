@@ -50,7 +50,7 @@ public class Main
 			return true;
 		initialized = true;
 
-		mc = Minecraft.getMinecraft();
+		mc = Minecraft.getInstance();
 
 		config = new Config(mc.gameDir + File.separator + "config" + File.separator + "MouseTweaks.cfg");
 		config.read();
