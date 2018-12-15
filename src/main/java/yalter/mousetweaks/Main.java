@@ -169,14 +169,16 @@ public class Main
 			} else {
 				disableForThisContainer = handler.isMouseTweaksDisabled();
 				disableWheelForThisContainer = handler.isWheelTweakDisabled();
+                ((IMixinMouseHelper) mc.mouseHelper).getAndResetDWheel();
 
-				Logger.DebugLog("Handler: "
+                Logger.DebugLog("Handler: "
 					+ handler.getClass().getSimpleName()
 					+ "; MT is "
 					+ (disableForThisContainer ? "disabled" : "enabled")
 					+ "; wheel tweak is "
 					+ (disableWheelForThisContainer ? "disabled" : "enabled")
 					+ ".");
+				return;
 			}
 		}
 
